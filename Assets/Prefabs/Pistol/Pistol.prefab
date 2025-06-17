@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235428361027815246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletShellPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 649312383512253052}
   - component: {fileID: 3764092717178256127}
   - component: {fileID: 146183097676540814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 306716728888894087}
   - component: {fileID: 6525920869731646022}
   - component: {fileID: 110556080271937287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 1532929455304410379}
   - component: {fileID: 3910183950629199942}
   - component: {fileID: 2501019740005416499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167949760127788693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttachTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119952090770668072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MuzzlePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 3949153337311110570}
   - component: {fileID: 7895733959936747336}
   - component: {fileID: 4917270398855417095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &3448703207309852454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05488c35450e5fc42877d49713df133c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 75e6d5f2181e30e46b65a644ce43f5a2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 188165960743283511}
   - component: {fileID: 1425093981921167425}
   - component: {fileID: 8248305580312209043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,6 +1001,7 @@ GameObject:
   - component: {fileID: 25924587356516832}
   - component: {fileID: 5114089000585842916}
   - component: {fileID: 8987937188880090330}
+  - component: {fileID: 1246699695621764613}
   m_Layer: 0
   m_Name: Magazine
   m_TagString: Untagged
@@ -1042,8 +1043,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0018134764, y: 0.0006753802, z: 0.0039104703}
-  m_Center: {x: -0.0002462825, y: -0.000032309825, z: -0.0006864423}
+  m_Size: {x: 0.0018134764, y: 0.0019608864, z: 0.0024310844}
+  m_Center: {x: -0.0002462825, y: 0.0015165594, z: -0.0000715208}
 --- !u!114 &8987937188880090330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,34 +1076,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 650800467926621094}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
-        m_MethodName: magazineLoad
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 650800467926621094}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
-        m_MethodName: magazineUnLoad
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -1128,3 +1105,15 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &1246699695621764613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473639561947677691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059ae86773054144f9acf7bcf8bbdd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

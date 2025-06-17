@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour
     [Header("-----Debug")]
     public bool isLoaded;
     public Coroutine fireRoutine;
+    public Coroutine gunClickRoutine;
     public MagazineController magazineController;
 
     void Start()
@@ -47,9 +48,9 @@ public class Gun : MonoBehaviour
                 fireRoutine = StartCoroutine(FireRoutine());
                 magazineController.CurrentBullet--;
             }
-            else
+            else if(gunClickRoutine == null)
             {
-                tickSound.Play();
+                gunClickRoutine = StartCoroutine(GunClickRoutine());
             }
         }
     }
@@ -60,22 +61,28 @@ public class Gun : MonoBehaviour
         Rigidbody bulletRig = bullet.GetComponent<Rigidbody>();
         bulletRig.collisionDetectionMode = CollisionDetectionMode.Continuous;
         bulletRig.AddForce(muzzlePoint.forward * fireSpeed, ForceMode.Impulse);
-        
+
         GameObject bulletShellOut = Instantiate(bulletShell, shellPoint.position, shellPoint.rotation);
         Rigidbody bulletShellRig = bulletShellOut.GetComponent<Rigidbody>();
         bulletShellRig.AddForce(shellPoint.forward * 5f, ForceMode.Impulse);
         Destroy(bulletShellOut, 3f);
-       
+
         Instantiate(fireFlash, muzzlePoint.position, muzzlePoint.rotation);
-        
+
         fireSound.Play();
 
         yield return new WaitForSeconds(fireDelay);
-        
-        if(bullet != null)
+
+        if (bullet != null)
         {
             Destroy(bullet);
         }
         fireRoutine = null;
+    }
+    IEnumerator GunClickRoutine()
+    {
+        tickSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        gunClickRoutine = null;
     }
 }
