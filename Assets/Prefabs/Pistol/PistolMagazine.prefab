@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 507900044194077905}
   - component: {fileID: 5567138576887909003}
   - component: {fileID: 5677980204907106485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PistolMagazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <magazine>k__BackingField: {fileID: 11400000, guid: c20f50f239e94f146827deeba4491543,
     type: 2}
-  currentBullet: 0
 --- !u!54 &507900044194077905
 Rigidbody:
   m_ObjectHideFlags: 0

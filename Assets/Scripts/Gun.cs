@@ -26,9 +26,9 @@ public class Gun : MonoBehaviour
         isLoaded = false;
     }
 
-    public void magazineLoad(MagazineController magazineController)
+    public void magazineLoad(MagazineController controller)
     {
-        this.magazineController = magazineController;
+        this.magazineController = controller;
         isLoaded = true;
     }
 
@@ -60,11 +60,18 @@ public class Gun : MonoBehaviour
         Rigidbody bulletRig = bullet.GetComponent<Rigidbody>();
         bulletRig.collisionDetectionMode = CollisionDetectionMode.Continuous;
         bulletRig.AddForce(muzzlePoint.forward * fireSpeed, ForceMode.Impulse);
+        
+        GameObject bulletShellOut = Instantiate(bulletShell, shellPoint.position, shellPoint.rotation);
+        Rigidbody bulletShellRig = bulletShellOut.GetComponent<Rigidbody>();
+        bulletShellRig.AddForce(shellPoint.forward * 5f, ForceMode.Impulse);
+        Destroy(bulletShellOut, 3f);
+       
         Instantiate(fireFlash, muzzlePoint.position, muzzlePoint.rotation);
-        Instantiate(bulletShell, shellPoint.position, shellPoint.rotation);
+        
         fireSound.Play();
 
         yield return new WaitForSeconds(fireDelay);
+        
         if(bullet != null)
         {
             Destroy(bullet);

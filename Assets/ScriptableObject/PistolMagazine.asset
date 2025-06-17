@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PistolMagazine
   m_EditorClassIdentifier: 
   bulletNum: 12
+  emptyPrefab: {fileID: 7175135911438928359, guid: b6bb140a3acd28246a6d2a5b199fa5d9,
+    type: 3}
   prefab: {fileID: 7175135911438928359, guid: 68a3dd9033107e547b6fd5524b90bf5f, type: 3}
   magazineType: 0
