@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e941cfe6d4de9c24cb285bc5cfeed4ba, type: 3}
   m_Name: SniperMagazine
   m_EditorClassIdentifier: 
-  bulletNum: 12
-  emptyPrefab: {fileID: 7175135911438928359, guid: b6bb140a3acd28246a6d2a5b199fa5d9,
+  bulletNum: 5
+  emptyPrefab: {fileID: 5889540464559049971, guid: 94ecb807fc5a7ee47904f925c6ad2cc1,
     type: 3}
-  prefab: {fileID: 7175135911438928359, guid: 68a3dd9033107e547b6fd5524b90bf5f, type: 3}
-  magazineType: 0
+  prefab: {fileID: 2589671081810957703, guid: 031b6c024108d1b47a4f21b98183d0f1, type: 3}
+  magazineType: 2
