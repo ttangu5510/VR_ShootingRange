@@ -25,12 +25,12 @@ public class Bullet : MonoBehaviour
             
             if (hitObject.layer == 10)
             {
-                Instantiate(hitStone, contact.point, Quaternion.LookRotation(contact.normal));
+                Instantiate(hitStone, contact.point, Quaternion.LookRotation(contact.normal)).gameObject.transform.SetParent(contact.otherCollider.gameObject.transform);
                 AudioManager.Instance.PlayClip("Stone_Impact", contact.point);
             }
             else if (hitObject.layer == 11)
             {
-                Instantiate(hitMetal, contact.point, Quaternion.LookRotation(contact.normal));
+                Instantiate(hitMetal, contact.point + (contact.normal * 0.02f), Quaternion.LookRotation(contact.normal)).gameObject.transform.SetParent(contact.otherCollider.gameObject.transform);
                 AudioManager.Instance.PlayClip("Metal_Impact", contact.point);
             }
             Destroy(gameObject);
