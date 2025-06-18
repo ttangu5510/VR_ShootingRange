@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RifleMagazine
   m_EditorClassIdentifier: 
   bulletNum: 30
-  emptyPrefab: {fileID: 5770200851071775236, guid: 102cd17eef8275f469f63dd69974a9b6,
+  emptyPrefab: {fileID: 7155297825462059616, guid: 102cd17eef8275f469f63dd69974a9b6,
     type: 3}
-  prefab: {fileID: 5770200851071775236, guid: 102cd17eef8275f469f63dd69974a9b6, type: 3}
+  prefab: {fileID: 7155297825462059616, guid: 102cd17eef8275f469f63dd69974a9b6, type: 3}
   magazineType: 1

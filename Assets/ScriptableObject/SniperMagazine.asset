@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SniperMagazine
   m_EditorClassIdentifier: 
   bulletNum: 5
-  emptyPrefab: {fileID: 5889540464559049971, guid: 94ecb807fc5a7ee47904f925c6ad2cc1,
+  emptyPrefab: {fileID: 4933265365727746062, guid: 94ecb807fc5a7ee47904f925c6ad2cc1,
     type: 3}
-  prefab: {fileID: 2589671081810957703, guid: 031b6c024108d1b47a4f21b98183d0f1, type: 3}
+  prefab: {fileID: 4342536347739493354, guid: 031b6c024108d1b47a4f21b98183d0f1, type: 3}
   magazineType: 2
