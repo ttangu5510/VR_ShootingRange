@@ -26,14 +26,13 @@ public class Bullet : MonoBehaviour
             if (hitObject.layer == 10)
             {
                 Instantiate(hitStone, contact.point, Quaternion.LookRotation(contact.normal));
-                AudioSource.PlayClipAtPoint(hitStoneSound.clip, contact.point);
+                AudioManager.Instance.PlayClip("Stone_Impact", contact.point);
             }
             else if (hitObject.layer == 11)
             {
                 Instantiate(hitMetal, contact.point, Quaternion.LookRotation(contact.normal));
-                AudioSource.PlayClipAtPoint(hitMetalSound.clip, contact.point);
+                AudioManager.Instance.PlayClip("Metal_Impact", contact.point);
             }
-            
             Destroy(gameObject);
             break;
         }

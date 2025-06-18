@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81d050552789c64fab46282066412fd, type: 3}
-  m_Name: StoneImpact
+  m_Name: Noise
   m_EditorClassIdentifier: 
-  clipName: 
-  clipSource: {fileID: 0}
+  clipName: Noise
+  clipSource: {fileID: 8300000, guid: 8907cb81194370446aa057f0666c8921, type: 3}
   volume: 1
-  loop: 0
+  loop: 1

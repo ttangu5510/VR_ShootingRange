@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81d050552789c64fab46282066412fd, type: 3}
   m_Name: Pistol_Fire
   m_EditorClassIdentifier: 
-  clipName: 
-  clipSource: {fileID: 0}
+  clipName: Pistol_Fire
+  clipSource: {fileID: 8300000, guid: 1baeca875f4934e49b68bc54af4c7cfc, type: 3}
   volume: 1
   loop: 0

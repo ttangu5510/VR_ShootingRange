@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81d050552789c64fab46282066412fd, type: 3}
-  m_Name: AR_Fire
+  m_Name: Stone_Impact
   m_EditorClassIdentifier: 
-  clipName: AR_Fire
-  clipSource: {fileID: 8300000, guid: 13a19d51bbc14a24db723db8b5b11911, type: 3}
+  clipName: Stone_Impact
+  clipSource: {fileID: 8300000, guid: 96a8b3565a759f94d8beb5eef26c7dc6, type: 3}
   volume: 1
   loop: 0

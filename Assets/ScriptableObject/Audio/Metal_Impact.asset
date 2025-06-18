@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81d050552789c64fab46282066412fd, type: 3}
-  m_Name: MetalImpact
+  m_Name: Metal_Impact
   m_EditorClassIdentifier: 
-  clipName: 
-  clipSource: {fileID: 0}
+  clipName: Metal_Impact
+  clipSource: {fileID: 8300000, guid: b3050ff7f748653458f9a04304fcfe9b, type: 3}
   volume: 1
   loop: 0
