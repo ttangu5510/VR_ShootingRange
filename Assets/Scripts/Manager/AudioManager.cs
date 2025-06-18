@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -9,17 +7,17 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance
     {
-        get 
-        { 
+        get
+        {
             if (instance == null)
             {
                 GameObject go = new GameObject("AudioManager");
                 instance = go.AddComponent<AudioManager>();
                 DontDestroyOnLoad(go);
             }
-            return instance; 
+            return instance;
         }
-        set {  instance = value; }
+        set { instance = value; }
     }
     [Header("Set DB")]
     [SerializeField] AudioDataBase audioDB;
@@ -27,13 +25,14 @@ public class AudioManager : MonoBehaviour
     [Header("Set AudioSource")]
     [SerializeField] AudioSource bgmSource;
     [SerializeField] AudioSource ambientSource;
+    [SerializeField] AudioSource effectSource;
 
     [Header("Set AudioClip")]
     [SerializeField] AudioData defaultBGM;
     [SerializeField] AudioData defaultAmbient;
 
     private Dictionary<string, AudioData> audioDict;
-    
+
     private void Awake()
     {
         if (instance != null)
@@ -43,9 +42,9 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-            
+
         audioDict = new Dictionary<string, AudioData>();
-        foreach(AudioData data in audioDB.audioList)
+        foreach (AudioData data in audioDB.audioList)
         {
             audioDict.Add(data.clipName, data);
         }
@@ -77,10 +76,23 @@ public class AudioManager : MonoBehaviour
             Destroy(go, data.clipSource.length);
         }
     }
+    public void PlayEffect(string name)
+    {
+        if (!audioDict.TryGetValue(name, out AudioData data))
+        {
+            Debug.LogError($"사운드 파일이 없음 : {name}");
+            return;
+        }
+        effectSource.clip = data.clipSource;
+        effectSource.volume = data.volume;
+        effectSource.loop = data.loop;
+        effectSource.Play();
+    }
+
     public void PlayBGM(AudioData bgm)
     {
         if (bgmSource.isPlaying && bgmSource.clip == bgm.clipSource) return;
-        
+
         bgmSource.clip = bgm.clipSource;
         bgmSource.volume = bgm.volume;
         bgmSource.loop = bgm.loop;
